@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <title>Form</title>
+  </head>
+  <body>
+    <section class="content py-md-5 py-3">
+      <div class="form-content p-3">
+        <!-- navigations starts here  -->
+        <div class="navigation py-3">
+          <!-- <div class="step-span">
+            <span>STEP: <span class="stepNum">1</span> OF 3 </span>
+          </div> -->
+          <div class="stepNumbers px-3 py-2 pb-4">
+            <!-- input for stepnum  -->
+            <input type="radio" name="stepnum" id="num1" />
+            <input type="radio" name="stepnum" id="num2" />
+            <input type="radio" name="stepnum" id="num3" />
+            <div class="inner">
+              <div class="stepnumbar"></div>
+              <div class="stepnumbarBG"></div>
+              <div class="numcircle step1num">1</div>
+              <div class="numcircle step2num">2</div>
+              <div class="numcircle step3num">3</div>
+            </div>
+          </div>
+          <div class="title d-flex flex-wrap justify-content-between">
+            <div class="steps-title mb-2">
+              <h5 class="step-1-title">Your Profile</h5>
+              <h5 class="step-2-title">Your Password</h5>
+              <h5 class="step-3-title">Tell me about yourself</h5>
+            </div>
+            <div class="steps-finished d-flex align-items-center">
+              <div class="bar">
+                <div class="finished"></div>
+              </div>
+              <span class="finishedNum">33%</span>
+            </div>
+          </div>
+        </div>
+        <!-- navigations ends here  -->
+        <!-- step content starts here -->
+        <div class="py-25">
+          <form action="#" method="post">
+            <!-- step 1  -->
+            <div class="stepContent step_1">
+              <!-- profile image  -->
+              <div class="mb-4 text-center">
+                <div class="profile-image">
+                  <img
+                    src="./img/profileimg.jpg"
+                    class="profileImg"
+                    alt="profile"
+                  />
+                  <label
+                    for="ProfileImg"
+                    class="
+                      inpLabel
+                      px-3
+                      py-2
+                      fw-500
+                      bg-white
+                      shadow-sm
+                      rounded-3
+                    "
+                  >
+                    <i class="fas fa-camera"></i>
+                    <span> Browse Photo </span>
+                  </label>
+                  <input
+                    type="file"
+                    name="profile-image"
+                    id="ProfileImg"
+                    accept="image/png, image/jpeg"
+                  />
+                  <span class="inpinfo d-block"
+                    >Click to add profile picture</span
+                  >
+                </div>
+              </div>
+
+              <!-- firstname -->
+              <div class="mb-3">
+                <div class="profile-firstname">
+                  <label
+                    for="firstname"
+                    class="text-primary mb-1 d-block fw-bold"
+                    >Firstname</label
+                  >
+                  <div class="position-relative inpwrapper">
+                    <input
+                      type="text"
+                      name="firstname"
+                      id="firstname"
+                      class="w-100 shadow-sm fw-500 px-4 py-2 bg-white"
+                      autocomplete="off"
+                      placeholder="Enter your firstname.."
+                    />
+                    <div class="inputFocus"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- email  -->
+              <div class="mb-3">
+                <div class="profile-email">
+                  <label for="email" class="text-primary mb-1 d-block fw-bold"
+                    >Email</label
+                  >
+                  <div class="position-relative inpwrapper">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="w-100 shadow-sm fw-500 px-4 py-2 bg-white"
+                      autocomplete="off"
+                      placeholder="Enter your email address.."
+                    />
+                    <div class="inputFocus"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- step 2 -->
+            <div class="stepContent step_2">
+              <!-- password  -->
+              <div class="mb-5">
+                <div class="profile-password position-relative">
+                  <label
+                    for="password"
+                    class="text-primary mb-1 d-block fw-bold"
+                  >
+                    Set up password
+                  </label>
+                  <div class="text-grey mt-2 mb-4 passinfo">
+                    Please create a secure password including the following
+                    criteria below.
+                    <ul class="mt-2 ms-3">
+                      <li class="lowerValid">lowercase letters</li>
+                      <li class="numValid">numbers</li>
+                      <li class="upperValid">uppercase letters</li>
+                      <li class="speCharValid">special characters</li>
+                      <li class="lenValid">minimum 8 characters</li>
+                    </ul>
+                  </div>
+                  <div class="pass-Input position-relative bg-white">
+                    <label
+                      for="togglepass"
+                      class="far fa-eye position-absolute hidelabel"
+                    ></label>
+                    <input
+                      type="checkbox"
+                      class="position-absolute h-100 w-100 start-0 top-0"
+                      name="togglepass"
+                      id="togglepass"
+                    />
+                    <input
+                      type="password"
+                      id="password"
+                      class="
+                        w-100
+                        shadow-sm
+                        fw-500
+                        px-4
+                        py-2
+                        pe-5
+                        position-absolute
+                        w-100
+                        top-0
+                        start-0
+                      "
+                      placeholder="Your strong password..."
+                    />
+                  </div>
+                  <div class="blankspaceAlert">
+                    <span>You can't add blankspace as password</span>
+                    <i class="closespaceAlert fas fa-times"></i>
+                  </div>
+                  <div
+                    class="
+                      passwordValidation
+                      mt-3
+                      mb-2
+                      d-flex
+                      align-items-center
+                    "
+                  >
+                    <div class="strength-bar flex-grow-1">
+                      <div class="strength-Level"></div>
+                    </div>
+                    <div class="strLevel">
+                      <span class="strengthText"></span>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-grey m-0 fw-500">
+                    Inspired from dribbble shot: Exploration for a password
+                    strength meter by Josh Overton.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- step 3  -->
+            <div class="stepContent step_3">
+              <!-- gender  -->
+              <div class="mb-3">
+                <div class="profile-gender">
+                  <span class="text-primary d-block fw-bold mb-1">Gender</span>
+                  <div class="d-flex">
+                    <label for="male" class="shadow-sm">
+                      <input
+                        type="radio"
+                        name="Gender"
+                        class="genderCheckbox"
+                        id="male"
+                        checked
+                      />
+                      <span class="customCheck"></span>
+                      <span>Male</span>
+                    </label>
+                    <label for="female" class="shadow-sm">
+                      <input
+                        type="radio"
+                        name="Gender"
+                        class="genderCheckbox"
+                        id="female"
+                      />
+                      <span class="customCheck"></span>
+                      <span>Female</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- profession  -->
+              <div class="mb-3">
+                <div class="profile-profession">
+                  <label
+                    for="profession"
+                    class="text-primary mb-1 d-block fw-bold"
+                    >profession</label
+                  >
+                  <div class="position-relative inpwrapper">
+                    <input
+                      type="text"
+                      name="profession"
+                      id="profession"
+                      class="
+                        w-100
+                        shadow-sm
+                        fw-500
+                        px-4
+                        py-2
+                        bg-white
+                        inputFocus
+                      "
+                      autocomplete="off"
+                      placeholder="eg. Web Developer"
+                    />
+                    <div class="inputFocus"></div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="submitBtn mt-4">Complete</button>
+            </div>
+          </form>
+          <!-- bottomNavigation  -->
+          <div class="bottomNavigation py-3 w-100 bg-white">
+            <div class="inner px-3 d-flex flex-wrap px-md-5 m-auto">
+              <div class="w-50">
+                <button data-tostep="0" class="shadow-sm fw-500 prev-btn">
+                  Previous
+                </button>
+              </div>
+              <div class="text-end w-50">
+                <button data-tostep="2" class="shadow-sm fw-500 step-btn">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- step content ends here -->
+    </section>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/fontawesome.js"></script>
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
